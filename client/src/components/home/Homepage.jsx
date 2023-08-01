@@ -1,21 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./homepage.css";
 import healthyHeart from "./images/heart-healthy-food-1580231690.jpg";
 import {  Link } from "react-router-dom";
 
 
-export default function homepage() {
-    const [message, setMessage] = useState("");
+export default function Homepage() {
+    // const [message, setMessage] = useState("");
 
-    useEffect(() => {
-        fetch("http://localhost:3000")
-        .then((res) => res.json())
-        .then((data) => setMessage(data.message));
-    }, []);
+    // useEffect(() => {
+    //     fetch("http://localhost:4000")
+    //     .then((res) => res.json())
+    //     .then((data) => setMessage(data));
+    // }, []);
 
     return(
         <div className="container">
-            <h1>{message}</h1>
+            {/* <h1>{message}</h1> */}
             <div className="top-portion">
                 <h1 style={{fontSize: 64}}>Fitmed</h1>
                 <h3 style={{fontSize: 36}}>Join others in the journey to eating healthy and happily</h3>

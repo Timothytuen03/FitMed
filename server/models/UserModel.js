@@ -8,5 +8,21 @@ let userSchema = new Schema( {
         type: String,
         unique: true,
         required
-    }
+    },
+    username: {
+        type: String,
+        unique: true,
+        required
+    },
+    firstName: {
+        type: String
+    },
+    lastName: {
+        type: String
+    },
+    // profilePicture: 
 })
+
+userSchema.plugin(passportLocalMongoose);
+const User = mongoose.model("User", userSchema);
+export default User;

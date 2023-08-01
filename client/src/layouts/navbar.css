@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px 3px;
+    align-items: center;
+    border-bottom: 1px solid black;
+    height: 40px;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}

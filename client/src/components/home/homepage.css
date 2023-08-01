@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&display=swap');
+
+h1 {font-size: 64;}
+h3 {font-size: 36;}
+p {font-size: 32;}
+
+body {
+    font-family: 'Markazi Text', serif;
+    background-color: #3D3E47;
+    color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+.top-portion {
+    text-align: center;
+}
+
+.account-buttons {
+    margin-bottom: 20px;
+}
+
+.btn{
+    display: inline-block;
+    border-radius: 15px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 1.5em;
+    width: 12vw;
+    text-align: center;
+}
+
+.create-btn {
+    margin-right: 50px;
+}
+
+.log-btn {
+    margin-left: 50px;
+}
+
+.bottom-portion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    font-size: 26px;
+}
+
+.desc-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

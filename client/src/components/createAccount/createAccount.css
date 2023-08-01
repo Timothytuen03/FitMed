@@ -1,0 +1,38 @@
+.return {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.returnBtn {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+}
+
+.title {
+    text-align: center;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: auto;
+    margin-top: 40px;
+    border: solid 1px;
+    padding: 15px;
+}
+
+.create-label {
+    margin-top: 10px;
+    font-size: x-large;
+}
+
+.create-btn {
+    max-width: 200px;
+    /* border: 1px black solid; */
+    border-radius: 10px;
+    margin-top: 20px;
+    text-decoration: solid;
+    cursor: pointer;
+}

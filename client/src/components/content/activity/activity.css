@@ -1,0 +1,62 @@
+.activity-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #ffffff;
+    height: 70vh;
+}
+
+.activity-col {
+    border: 1px white solid;
+}
+
+.activity-col-header {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.activity-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px;
+    align-items: center;
+    height: 20vh;
+}
+
+.activity-filter {
+    width: 300px;
+}
+
+.activity-filter input {
+    width: 70%;
+    padding: 5px 0;
+}
+
+.change-period {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 200px;
+    font-size: 20px;
+}
+
+.change-period select {
+    position: relative;
+    left: 15px;
+    height: fit-content;
+    padding: 3px;
+}
+
+.select-period {
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-period button {
+    width: 20%;
+}
+
+.activity-add-item {
+    width: fit-content;
+    font-size: 20px;
+    padding: 20px 40px;
+}

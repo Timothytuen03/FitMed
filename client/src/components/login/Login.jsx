@@ -1,10 +1,24 @@
-import React, { useState } from 'react'
-import './login.css'
-import { Link } from 'react-router-dom'
+import React, { useState, useContext } from 'react'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
+import axios from 'axios';
+import useAuth from '../../useAuth';
+import "./login.css"
 
 export default function Login() {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
+  const navigate = useNavigate();
+  const {loginUser} = useAuth();
+
+  const sendLogin = async () => {
+    const result = await loginUser(username, password)
+    console.log(result)
+    if(result) navigate('/dashboard');
+    else alert("Please try logging in again");
+    // if(result == true) {console.log("yay worked")}
+    // else console.log("didn't work");
+  }
 
   return (
     <div>
@@ -13,9 +27,9 @@ export default function Login() {
       </div>
       <h1 className='title'>Sign Into Your Account</h1>
 
-      <form action="" className='login-form'>
-        <label htmlFor="email" className='input-label'>Email:</label>
-        <input type="email" name="email" onChange={(text) => setEmail(text.target.value)} value={email} className='text-input'/>
+      <div className='login-form'>
+        <label htmlFor="username" className='input-label'>Username:</label>
+        <input type="text" name="username" onChange={(text) => setUsername(text.target.value)} value={username} className='text-input'/>
 
         <label htmlFor="password" className='input-label'>Password:</label>
         <input type="password" name="password" onChange={(text) => setPassword(text.target.value)} value={password} className='text-input'/>
@@ -24,14 +38,14 @@ export default function Login() {
             <input type="checkbox" name="remember" className='remember-btn'/>
             <label htmlFor="remember" className='remember-label'>Remember Me</label>
           </div>
-          <button className='login-btn'>Sign In</button>
+          <button className='login-btn' onClick={() => sendLogin()}>Sign In</button>
         </div>
 
         <div className="login-bottom">
           <Link to="" className='link-btn'>Forgot Password</Link>
           <Link to="/create-account" className='link-btn'>Create Account</Link>
         </div>
-      </form>
+      </div>
     </div>
   )
 }

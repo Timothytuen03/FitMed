@@ -7,12 +7,12 @@ let userSchema = new Schema( {
     email: {
         type: String,
         unique: true,
-        required
+        required: true
     },
     username: {
         type: String,
         unique: true,
-        required
+        required: true
     },
     firstName: {
         type: String

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./homepage.css";
 import healthyHeart from "./images/heart-healthy-food-1580231690.jpg";
 import {  Link } from "react-router-dom";
@@ -22,8 +22,6 @@ export default function Homepage() {
                 <div className="account-buttons">
                     <Link to="create-account" className="create-btn btn">Create an Account</Link>
                     <Link to="login" className="log-btn btn">Log in</Link>
-                    {/* <button className="create-btn btn">Create an Account</button>
-                    <button className="log-btn btn">Log in</button> */}
                 </div>
                 <img src={healthyHeart} alt="healthy-food-heart" style={{maxWidth: 500}}/>
             </div>

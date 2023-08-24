@@ -4,7 +4,9 @@ import useAuth from '../../useAuth'
 import { useNavigate } from 'react-router-dom';
 
 export default function Dashboard() {
-  const {logoutUser} = useAuth();
+  console.log("dashboard page");
+  const {logoutUser, userObject} = useAuth();
+  console.log(userObject);
   const nav = useNavigate();
   const logout = async () => {
     const result = await logoutUser();

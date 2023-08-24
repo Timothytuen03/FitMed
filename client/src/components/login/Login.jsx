@@ -13,7 +13,7 @@ export default function Login() {
 
   const sendLogin = async () => {
     const result = await loginUser(username, password)
-    console.log(result)
+    console.log("result of login: " + result);
     if(result) navigate('/dashboard');
     else alert("Please try logging in again");
     // if(result == true) {console.log("yay worked")}

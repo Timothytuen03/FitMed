@@ -20,7 +20,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(session({
     secret: 'fillersecret',
-    resave: false,
+    resave: true,
     saveUninitialized: true,
     cookie: {
         // sameSite: "none",
@@ -80,7 +80,7 @@ app.post("/api/user/create-account", (req, res) => {
     })
 })
 
-app.post("/api/user/login", passport.authenticate('local'), (req, res) => {
+app.post("/api/user/login", passport.authenticate('local', {failureMessage: true}), (req, res) => {
     console.log("successful authentication/login")
     console.log(req.user)
     res.send(req.user);
@@ -98,6 +98,8 @@ app.post("/api/user/logout", (req, res) => {
             res.send(true);
         }
     });
+    // req.session.destroy();
+    console.log(req.user);
     // req.session.destroy(function (err) {
     //     if (!err) {
     //         res.status(200).clearCookie('connect.sid', {path: '/'}).json({status: "Success"});
